@@ -38,15 +38,12 @@ class ViewController: UIViewController {
     }
     
     private func configUI() {
-        let button1 = UIButton(type: .system)
-        button1.setTitle("Photo Wall", for: .normal)
+        let button1 = UIHelper.createButton(title: "Photo Wall", target: self, selector: #selector(ViewController.GoPhoto))
         button1.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
         button1.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button1.backgroundColor = .yellow
-        button1.addTarget(self, action: #selector(ViewController.GoPhoto), for: .touchUpInside)
-        
-        let button2 = UIButton(type: .system)
-        button2.setTitle("Photo Wall2", for: .normal)
+
+        let button2 = UIHelper.createButton(title: "MemeApi", target: self, selector: #selector(ViewController.GoMeme))
         button2.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
         button2.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button2.backgroundColor = .lightGray
@@ -72,6 +69,12 @@ class ViewController: UIViewController {
         let photoVC = PhotoViewController(nibName: String(describing: PhotoViewController.self), bundle: nil)
         photoVC.title = "PhotoImageDownload"
         navigationController?.pushViewController(photoVC, animated: true)
+    }
+    
+    @objc func GoMeme() {
+        let memeVC = MemeViewController(nibName: String(describing: MemeViewController.self), bundle: nil)
+        memeVC.title = "MemeApi"
+        navigationController?.pushViewController(memeVC, animated: true)
     }
     
     

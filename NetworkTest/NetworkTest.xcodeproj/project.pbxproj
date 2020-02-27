@@ -17,6 +17,9 @@
 		276F87CC2405034C007C65C7 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 276F87CA2405034C007C65C7 /* PhotoViewController.xib */; };
 		27B230BB24079DBF0020F483 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B230B824079DBF0020F483 /* UIHelper.swift */; };
 		27B230BC24079DBF0020F483 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 27B230B924079DBF0020F483 /* README.md */; };
+		27B230C12407A0490020F483 /* MemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B230BF2407A0490020F483 /* MemeViewController.swift */; };
+		27B230C22407A0490020F483 /* MemeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B230C02407A0490020F483 /* MemeViewController.xib */; };
+		27B230C62407A0D00020F483 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B230C52407A0D00020F483 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		276F87CA2405034C007C65C7 /* PhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 		27B230B824079DBF0020F483 /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		27B230B924079DBF0020F483 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		27B230BF2407A0490020F483 /* MemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeViewController.swift; sourceTree = "<group>"; };
+		27B230C02407A0490020F483 /* MemeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemeViewController.xib; sourceTree = "<group>"; };
+		27B230C52407A0D00020F483 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,16 +70,16 @@
 		276F87B224015CFE007C65C7 /* NetworkTest */ = {
 			isa = PBXGroup;
 			children = (
+				27B230C32407A0500020F483 /* Views */,
+				27B230BE2407A01B0020F483 /* ViewControllers */,
 				27B230B724079DBF0020F483 /* Helpers */,
+				27B230C42407A0A50020F483 /* Models */,
 				276F87B324015CFE007C65C7 /* AppDelegate.swift */,
 				276F87B524015CFE007C65C7 /* SceneDelegate.swift */,
-				276F87B724015CFE007C65C7 /* ViewController.swift */,
 				276F87B924015CFE007C65C7 /* Main.storyboard */,
 				276F87BC24015D03007C65C7 /* Assets.xcassets */,
 				276F87BE24015D03007C65C7 /* LaunchScreen.storyboard */,
 				276F87C124015D03007C65C7 /* Info.plist */,
-				276F87C92405034C007C65C7 /* PhotoViewController.swift */,
-				276F87CA2405034C007C65C7 /* PhotoViewController.xib */,
 			);
 			path = NetworkTest;
 			sourceTree = "<group>";
@@ -85,6 +91,33 @@
 				27B230B924079DBF0020F483 /* README.md */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		27B230BE2407A01B0020F483 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				276F87B724015CFE007C65C7 /* ViewController.swift */,
+				276F87C92405034C007C65C7 /* PhotoViewController.swift */,
+				27B230BF2407A0490020F483 /* MemeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		27B230C32407A0500020F483 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				276F87CA2405034C007C65C7 /* PhotoViewController.xib */,
+				27B230C02407A0490020F483 /* MemeViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		27B230C42407A0A50020F483 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27B230C52407A0D00020F483 /* Meme.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +182,7 @@
 				276F87CC2405034C007C65C7 /* PhotoViewController.xib in Resources */,
 				27B230BC24079DBF0020F483 /* README.md in Resources */,
 				276F87BD24015D03007C65C7 /* Assets.xcassets in Resources */,
+				27B230C22407A0490020F483 /* MemeViewController.xib in Resources */,
 				276F87BB24015CFE007C65C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,8 +196,10 @@
 			files = (
 				276F87B824015CFE007C65C7 /* ViewController.swift in Sources */,
 				276F87B424015CFE007C65C7 /* AppDelegate.swift in Sources */,
+				27B230C62407A0D00020F483 /* Meme.swift in Sources */,
 				276F87B624015CFE007C65C7 /* SceneDelegate.swift in Sources */,
 				27B230BB24079DBF0020F483 /* UIHelper.swift in Sources */,
+				27B230C12407A0490020F483 /* MemeViewController.swift in Sources */,
 				276F87CB2405034C007C65C7 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
