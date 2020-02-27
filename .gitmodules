@@ -1,0 +1,3 @@
+[submodule "NetworkTest/NetworkTest/Helpers"]
+	path = NetworkTest/NetworkTest/Helpers
+	url = https://github.com/chiron-wang/SwiftHelpers.git
