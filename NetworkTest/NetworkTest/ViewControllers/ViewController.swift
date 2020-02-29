@@ -48,6 +48,10 @@ class ViewController: UIViewController {
         button2.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button2.backgroundColor = .lightGray
         
+        let button3 = UIHelper.createButton(title: "ItunesSongApi", target: self, selector: #selector(ViewController.GoSong))
+        button3.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
+        button3.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
@@ -57,6 +61,7 @@ class ViewController: UIViewController {
         
         stackView.addArrangedSubview(button1)
         stackView.addArrangedSubview(button2)
+        stackView.addArrangedSubview(button3)
         view.addSubview(stackView)
         
         stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -75,6 +80,12 @@ class ViewController: UIViewController {
         let memeVC = MemeViewController(nibName: String(describing: MemeViewController.self), bundle: nil)
         memeVC.title = "MemeApi"
         navigationController?.pushViewController(memeVC, animated: true)
+    }
+    
+    @objc func GoSong() {
+        let songVC = SongViewController(nibName: String(describing: SongViewController.self), bundle: nil)
+        songVC.title = "ItunesSongApi"
+        navigationController?.pushViewController(songVC, animated: true)
     }
     
     

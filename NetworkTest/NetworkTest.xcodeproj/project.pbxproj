@@ -20,6 +20,10 @@
 		27B230C12407A0490020F483 /* MemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B230BF2407A0490020F483 /* MemeViewController.swift */; };
 		27B230C22407A0490020F483 /* MemeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B230C02407A0490020F483 /* MemeViewController.xib */; };
 		27B230C62407A0D00020F483 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B230C52407A0D00020F483 /* Meme.swift */; };
+		27D60A5C24093E9C0049D5C1 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D60A5B24093E9C0049D5C1 /* Song.swift */; };
+		27D60A5F24093F490049D5C1 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D60A5D24093F490049D5C1 /* SongViewController.swift */; };
+		27D60A6024093F490049D5C1 /* SongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D60A5E24093F490049D5C1 /* SongViewController.xib */; };
+		27D60A65240958BD0049D5C1 /* Preview.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D60A64240958BD0049D5C1 /* Preview.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,11 @@
 		27B230BF2407A0490020F483 /* MemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeViewController.swift; sourceTree = "<group>"; };
 		27B230C02407A0490020F483 /* MemeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemeViewController.xib; sourceTree = "<group>"; };
 		27B230C52407A0D00020F483 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		27D60A5B24093E9C0049D5C1 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		27D60A5D24093F490049D5C1 /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
+		27D60A5E24093F490049D5C1 /* SongViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongViewController.xib; sourceTree = "<group>"; };
+		27D60A6224094F4F0049D5C1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		27D60A64240958BD0049D5C1 /* Preview.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Preview.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			children = (
 				276F87B224015CFE007C65C7 /* NetworkTest */,
 				276F87B124015CFE007C65C7 /* Products */,
+				27D60A6124094F4F0049D5C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +88,7 @@
 				276F87B524015CFE007C65C7 /* SceneDelegate.swift */,
 				276F87B924015CFE007C65C7 /* Main.storyboard */,
 				276F87BC24015D03007C65C7 /* Assets.xcassets */,
+				27D60A64240958BD0049D5C1 /* Preview.xcassets */,
 				276F87BE24015D03007C65C7 /* LaunchScreen.storyboard */,
 				276F87C124015D03007C65C7 /* Info.plist */,
 			);
@@ -99,6 +110,7 @@
 				276F87B724015CFE007C65C7 /* ViewController.swift */,
 				276F87C92405034C007C65C7 /* PhotoViewController.swift */,
 				27B230BF2407A0490020F483 /* MemeViewController.swift */,
+				27D60A5D24093F490049D5C1 /* SongViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -108,6 +120,7 @@
 			children = (
 				276F87CA2405034C007C65C7 /* PhotoViewController.xib */,
 				27B230C02407A0490020F483 /* MemeViewController.xib */,
+				27D60A5E24093F490049D5C1 /* SongViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,8 +129,17 @@
 			isa = PBXGroup;
 			children = (
 				27B230C52407A0D00020F483 /* Meme.swift */,
+				27D60A5B24093E9C0049D5C1 /* Song.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		27D60A6124094F4F0049D5C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27D60A6224094F4F0049D5C1 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +205,8 @@
 				27B230BC24079DBF0020F483 /* README.md in Resources */,
 				276F87BD24015D03007C65C7 /* Assets.xcassets in Resources */,
 				27B230C22407A0490020F483 /* MemeViewController.xib in Resources */,
+				27D60A6024093F490049D5C1 /* SongViewController.xib in Resources */,
+				27D60A65240958BD0049D5C1 /* Preview.xcassets in Resources */,
 				276F87BB24015CFE007C65C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,7 +222,9 @@
 				276F87B424015CFE007C65C7 /* AppDelegate.swift in Sources */,
 				27B230C62407A0D00020F483 /* Meme.swift in Sources */,
 				276F87B624015CFE007C65C7 /* SceneDelegate.swift in Sources */,
+				27D60A5C24093E9C0049D5C1 /* Song.swift in Sources */,
 				27B230BB24079DBF0020F483 /* UIHelper.swift in Sources */,
+				27D60A5F24093F490049D5C1 /* SongViewController.swift in Sources */,
 				27B230C12407A0490020F483 /* MemeViewController.swift in Sources */,
 				276F87CB2405034C007C65C7 /* PhotoViewController.swift in Sources */,
 			);
