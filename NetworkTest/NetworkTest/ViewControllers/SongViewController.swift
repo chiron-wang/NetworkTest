@@ -14,7 +14,7 @@ class SongViewController: UIViewController {
     var taylorSong: Song?
     var player: AVAudioPlayer?
     var soundData: Data?
-
+    
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var releaseLabel: UILabel!
@@ -24,8 +24,6 @@ class SongViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testGetSongs()
-
         let urlStr = "https://itunes.apple.com/search?term=swift&media=music"
         
         if let url = URL(string: urlStr) {
@@ -38,7 +36,12 @@ class SongViewController: UIViewController {
                         song.artistName == "Taylor Swift"
                     }
                     self.taylorSong = filterResult.randomElement()
-                    self.SetImage(self.taylorSong?.artworkUrl100)
+                    self.getImage(self.taylorSong?.artworkUrl100) { (image) in
+                        DispatchQueue.main.async {
+                            self.coverImageView.image = image
+                        }
+                    }
+                    
                     DispatchQueue.main.async {
                         self.artistLabel.text = self.taylorSong?.artistName
                         self.releaseLabel.text = self.taylorSong?.releaseDate.description
@@ -51,7 +54,7 @@ class SongViewController: UIViewController {
             }.resume()
         }
     }
-
+    
     // MARK: - IBAction
     
     @IBAction func playButtonPressed(_ sender: UIButton) {
@@ -75,31 +78,36 @@ class SongViewController: UIViewController {
     
     // MARK: - Functional Methods
     
-    func SetImage(_ url: URL?) {
+    func getImage(_ url: URL?, completionHandler: @escaping (UIImage?) -> Void) {
         if let url = url {
-            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let data = data {
-                    DispatchQueue.main.async {
-                        self.coverImageView.image = UIImage(data: data)
-                    }
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if let data = data, let image = UIImage(data: data) {
+                    completionHandler(image)
+                    //                    DispatchQueue.main.async {
+                    //                        self.coverImageView.image = UIImage(data: data)
+                    //                    }
+                } else {
+                    completionHandler(nil)
                 }
-            }
-            task.resume()
+            }.resume()
         }
     }
     
-    func testGetSongs() {
-        guard let data = NSDataAsset(name: "songs")?.data else {
-            print("data not exist")
-            return
-        }
-        do {
-            let decoder = JSONDecoder()
-            let result = try decoder.decode(SongResults.self, from: data)
-            print(result)
-        } catch {
-            print(error)
-        }
-    }
-    
+    /*
+     // code snippet
+     // TopBar => Editor => Create Code Snippet
+     func testGetSongs() {
+     guard let data = NSDataAsset(name: "songs")?.data else {
+     print("data not exist")
+     return
+     }
+     do {
+     let decoder = JSONDecoder()
+     let result = try decoder.decode(SongResults.self, from: data)
+     print(result)
+     } catch {
+     print(error)
+     }
+     }
+     */
 }
