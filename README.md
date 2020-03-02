@@ -2,10 +2,12 @@
 Network test lab.
 
 ## ViewController
+![image](https://github.com/chiron-wang/NetworkTest/blob/master/blogImages/ViewController.png)
 * 程式碼加入UIButton, StackView
 * 使用程式碼設定constraint, widthAnchor, heightAnchor, centerXAnchor, centerYAnchor...
 
 ## PhotoViewController
+![image](https://github.com/chiron-wang/NetworkTest/blob/master/blogImages/PhotoViewController.png)
 * 使用URLSession下載圖片，並設定到畫面上的四個UIImageView
 * 設定UI必須在主執行緒中執行
 ```swift=
@@ -15,12 +17,14 @@ DispatchQueue.main.async {
 ```
 
 ## MemeViewController
+![image](https://github.com/chiron-wang/NetworkTest/blob/master/blogImages/MemeViewController.png)
 * 練習呼叫MemeAPI
 * 練習解析ISO8601的時間格式 (DateFormatter)
 
 ref: https://some-random-api.ml/meme
 
 ## SongViewController
+![image](https://github.com/chiron-wang/NetworkTest/blob/master/blogImages/SongViewController.png)
 * 練習呼叫Api中帶有中文字的處理
 * 使用JSONDecoder()解析呼叫Api結果
 * 練習播放/停止 下載的音樂
@@ -30,6 +34,7 @@ ref: https://some-random-api.ml/meme
 ref: https://itunes.apple.com/search?term=戴佩妮&media=music
 
 ## SongTableViewController
+![image](https://github.com/chiron-wang/NetworkTest/blob/master/blogImages/SongTableViewController.png)
 * 練習使用Xib來建立UITableViewController & UITableViewCell
 * 在viewDidLoad()中註冊Cell
 * 使用propertyKeys來存放對應的key名稱
