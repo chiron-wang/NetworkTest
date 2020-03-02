@@ -26,6 +26,33 @@ class SongViewController: UIViewController {
         
         let urlStr = "https://itunes.apple.com/search?term=swift&media=music"
         
+        getSongJSON(urlStr)
+    }
+    
+    // MARK: - IBAction
+    
+    @IBAction func playButtonPressed(_ sender: UIButton) {
+        guard let soundData = soundData else { return }
+        
+        do {
+            player = try AVAudioPlayer(data: soundData)
+            player?.prepareToPlay()
+            player?.volume = 1.0
+            player?.play()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    
+    @IBAction func stopButtonPressed(_ sender: UIButton) {
+        guard let player = player else { return }
+        player.stop()
+    }
+    
+    // MARK: - Functional Methods
+    
+    private func getSongJSON(_ urlStr: String) {
         if let url = URL(string: urlStr) {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 let decoder = JSONDecoder()
@@ -54,29 +81,6 @@ class SongViewController: UIViewController {
             }.resume()
         }
     }
-    
-    // MARK: - IBAction
-    
-    @IBAction func playButtonPressed(_ sender: UIButton) {
-        guard let soundData = soundData else { return }
-        
-        do {
-            player = try AVAudioPlayer(data: soundData)
-            player?.prepareToPlay()
-            player?.volume = 1.0
-            player?.play()
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
-    
-    @IBAction func stopButtonPressed(_ sender: UIButton) {
-        guard let player = player else { return }
-        player.stop()
-    }
-    
-    // MARK: - Functional Methods
     
     func getImage(_ url: URL?, completionHandler: @escaping (UIImage?) -> Void) {
         if let url = url {

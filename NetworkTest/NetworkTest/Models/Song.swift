@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Song: Codable {
+class Song: Codable {
     let artistName: String
     let trackName: String
     let collectionName: String?
@@ -17,9 +17,29 @@ struct Song: Codable {
     let trackPrice: Double?
     let releaseDate: Date
     let isStreamable: Bool?
+    var trackId: Int
 }
 
 struct SongResults: Codable {
     let resultCount: Int
     let results: [Song]
 }
+
+// for unique
+extension Song: Hashable {
+    static func == (lhs: Song, rhs: Song) -> Bool {
+        return lhs.trackId == rhs.trackId
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.trackId)
+    }
+    
+}
+
+//// for group
+//extension Song: Sequence, IteratorProtocol {
+//    typealias Element = <#type#>
+//    
+//    typealias Element = <#type#>
+//}

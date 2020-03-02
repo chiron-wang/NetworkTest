@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27220F0F240BF68C00EAB1B5 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27220F0E240BF68C00EAB1B5 /* SongTableViewCell.swift */; };
+		27220F11240BF69900EAB1B5 /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27220F10240BF69900EAB1B5 /* SongTableViewCell.xib */; };
+		27220F15240C193000EAB1B5 /* Array+removeDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27220F14240C193000EAB1B5 /* Array+removeDuplicates.swift */; };
+		274754B0240B6C6700F2FF7D /* SongTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274754AE240B6C6700F2FF7D /* SongTableViewController.swift */; };
+		274754B1240B6C6700F2FF7D /* SongTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274754AF240B6C6700F2FF7D /* SongTableViewController.xib */; };
 		276F87B424015CFE007C65C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F87B324015CFE007C65C7 /* AppDelegate.swift */; };
 		276F87B624015CFE007C65C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F87B524015CFE007C65C7 /* SceneDelegate.swift */; };
 		276F87B824015CFE007C65C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F87B724015CFE007C65C7 /* ViewController.swift */; };
@@ -24,9 +29,15 @@
 		27D60A5F24093F490049D5C1 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D60A5D24093F490049D5C1 /* SongViewController.swift */; };
 		27D60A6024093F490049D5C1 /* SongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D60A5E24093F490049D5C1 /* SongViewController.xib */; };
 		27D60A65240958BD0049D5C1 /* Preview.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D60A64240958BD0049D5C1 /* Preview.xcassets */; };
+		CD3027C845CEFFF48A3D874F /* libPods-NetworkTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A177274D874EB9B72796A8A0 /* libPods-NetworkTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27220F0E240BF68C00EAB1B5 /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		27220F10240BF69900EAB1B5 /* SongTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
+		27220F14240C193000EAB1B5 /* Array+removeDuplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+removeDuplicates.swift"; sourceTree = "<group>"; };
+		274754AE240B6C6700F2FF7D /* SongTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewController.swift; sourceTree = "<group>"; };
+		274754AF240B6C6700F2FF7D /* SongTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewController.xib; sourceTree = "<group>"; };
 		276F87B024015CFE007C65C7 /* NetworkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276F87B324015CFE007C65C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		276F87B524015CFE007C65C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +58,9 @@
 		27D60A5E24093F490049D5C1 /* SongViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongViewController.xib; sourceTree = "<group>"; };
 		27D60A6224094F4F0049D5C1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		27D60A64240958BD0049D5C1 /* Preview.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Preview.xcassets; sourceTree = "<group>"; };
+		A177274D874EB9B72796A8A0 /* libPods-NetworkTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetworkTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF039E41A4C913B6F3FC8E65 /* Pods-NetworkTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkTest.release.xcconfig"; path = "Target Support Files/Pods-NetworkTest/Pods-NetworkTest.release.xcconfig"; sourceTree = "<group>"; };
+		F41F0D2F35794324D21AB3EA /* Pods-NetworkTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkTest.debug.xcconfig"; path = "Target Support Files/Pods-NetworkTest/Pods-NetworkTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,18 +68,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3027C845CEFFF48A3D874F /* libPods-NetworkTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27220F12240C184800EAB1B5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				27220F14240C193000EAB1B5 /* Array+removeDuplicates.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		274754B6240B86A900F2FF7D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				27220F0E240BF68C00EAB1B5 /* SongTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		276F87A724015CFE007C65C7 = {
 			isa = PBXGroup;
 			children = (
 				276F87B224015CFE007C65C7 /* NetworkTest */,
 				276F87B124015CFE007C65C7 /* Products */,
 				27D60A6124094F4F0049D5C1 /* Frameworks */,
+				DAF0B4C01292024E1D64A208 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,8 +114,10 @@
 			children = (
 				27B230C32407A0500020F483 /* Views */,
 				27B230BE2407A01B0020F483 /* ViewControllers */,
+				27220F12240C184800EAB1B5 /* Extensions */,
 				27B230B724079DBF0020F483 /* Helpers */,
 				27B230C42407A0A50020F483 /* Models */,
+				274754B6240B86A900F2FF7D /* Cells */,
 				276F87B324015CFE007C65C7 /* AppDelegate.swift */,
 				276F87B524015CFE007C65C7 /* SceneDelegate.swift */,
 				276F87B924015CFE007C65C7 /* Main.storyboard */,
@@ -111,6 +145,7 @@
 				276F87C92405034C007C65C7 /* PhotoViewController.swift */,
 				27B230BF2407A0490020F483 /* MemeViewController.swift */,
 				27D60A5D24093F490049D5C1 /* SongViewController.swift */,
+				274754AE240B6C6700F2FF7D /* SongTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -121,6 +156,8 @@
 				276F87CA2405034C007C65C7 /* PhotoViewController.xib */,
 				27B230C02407A0490020F483 /* MemeViewController.xib */,
 				27D60A5E24093F490049D5C1 /* SongViewController.xib */,
+				274754AF240B6C6700F2FF7D /* SongTableViewController.xib */,
+				27220F10240BF69900EAB1B5 /* SongTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,8 +175,18 @@
 			isa = PBXGroup;
 			children = (
 				27D60A6224094F4F0049D5C1 /* AVFoundation.framework */,
+				A177274D874EB9B72796A8A0 /* libPods-NetworkTest.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAF0B4C01292024E1D64A208 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F41F0D2F35794324D21AB3EA /* Pods-NetworkTest.debug.xcconfig */,
+				DF039E41A4C913B6F3FC8E65 /* Pods-NetworkTest.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +196,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 276F87C424015D03007C65C7 /* Build configuration list for PBXNativeTarget "NetworkTest" */;
 			buildPhases = (
+				97A048A94345AD440F48174B /* [CP] Check Pods Manifest.lock */,
 				276F87AC24015CFE007C65C7 /* Sources */,
 				276F87AD24015CFE007C65C7 /* Frameworks */,
 				276F87AE24015CFE007C65C7 /* Resources */,
@@ -200,6 +248,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27220F11240BF69900EAB1B5 /* SongTableViewCell.xib in Resources */,
+				274754B1240B6C6700F2FF7D /* SongTableViewController.xib in Resources */,
 				276F87C024015D03007C65C7 /* LaunchScreen.storyboard in Resources */,
 				276F87CC2405034C007C65C7 /* PhotoViewController.xib in Resources */,
 				27B230BC24079DBF0020F483 /* README.md in Resources */,
@@ -213,14 +263,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		97A048A94345AD440F48174B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetworkTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		276F87AC24015CFE007C65C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274754B0240B6C6700F2FF7D /* SongTableViewController.swift in Sources */,
 				276F87B824015CFE007C65C7 /* ViewController.swift in Sources */,
 				276F87B424015CFE007C65C7 /* AppDelegate.swift in Sources */,
+				27220F0F240BF68C00EAB1B5 /* SongTableViewCell.swift in Sources */,
 				27B230C62407A0D00020F483 /* Meme.swift in Sources */,
+				27220F15240C193000EAB1B5 /* Array+removeDuplicates.swift in Sources */,
 				276F87B624015CFE007C65C7 /* SceneDelegate.swift in Sources */,
 				27D60A5C24093E9C0049D5C1 /* Song.swift in Sources */,
 				27B230BB24079DBF0020F483 /* UIHelper.swift in Sources */,
@@ -368,6 +446,7 @@
 		};
 		276F87C524015D03007C65C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F41F0D2F35794324D21AB3EA /* Pods-NetworkTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -386,6 +465,7 @@
 		};
 		276F87C624015D03007C65C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF039E41A4C913B6F3FC8E65 /* Pods-NetworkTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

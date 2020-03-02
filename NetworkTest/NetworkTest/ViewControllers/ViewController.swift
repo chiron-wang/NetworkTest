@@ -38,34 +38,39 @@ class ViewController: UIViewController {
     }
     
     private func configUI() {
-        let button1 = UIHelper.createButton(title: "Photo Wall", target: self, selector: #selector(ViewController.GoPhoto))
-        button1.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
-        button1.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        button1.backgroundColor = .yellow
-
-        let button2 = UIHelper.createButton(title: "MemeApi", target: self, selector: #selector(ViewController.GoMeme))
-        button2.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
-        button2.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        button2.backgroundColor = .lightGray
-        
-        let button3 = UIHelper.createButton(title: "ItunesSongApi", target: self, selector: #selector(ViewController.GoSong))
-        button3.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
-        button3.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .equalSpacing
         stackView.alignment = .center
         stackView.spacing = 5.0
         stackView.translatesAutoresizingMaskIntoConstraints = false
+                
+        let selectors = [
+            #selector(ViewController.GoPhoto),
+            #selector(ViewController.GoMeme),
+            #selector(ViewController.GoSong),
+            #selector(ViewController.GoSongTB)
+        ]
+        let titles = [
+            "Photo Wall",
+            "MemeApi",
+            "ItunesSongApi",
+            "SongTableView"
+        ]
         
-        stackView.addArrangedSubview(button1)
-        stackView.addArrangedSubview(button2)
-        stackView.addArrangedSubview(button3)
+        for i in 0...3 {
+            let button = UIHelper.createButton(title: titles[i], target: self, selector: selectors[i])
+            button.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
+            button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+            stackView.addArrangedSubview(button)
+        }
+        
         view.addSubview(stackView)
         
         stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        
+        GoSongTB()
     }
     
     
@@ -86,6 +91,12 @@ class ViewController: UIViewController {
         let songVC = SongViewController(nibName: String(describing: SongViewController.self), bundle: nil)
         songVC.title = "ItunesSongApi"
         navigationController?.pushViewController(songVC, animated: true)
+    }
+    
+    @objc func GoSongTB() {
+        let songsTBVC = SongTableViewController(nibName: String(describing: SongTableViewController.self), bundle: nil)
+        songsTBVC.title = "SongTableView"
+        navigationController?.pushViewController(songsTBVC, animated: true)
     }
     
     
