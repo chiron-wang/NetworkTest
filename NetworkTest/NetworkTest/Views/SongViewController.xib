@@ -26,6 +26,15 @@
                     <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zud-V4-3rc">
+                    <rect key="frame" x="0.0" y="104" width="414" height="448"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="refreshButton:" destination="-1" eventType="touchUpInside" id="BQH-tQ-Nx7"/>
+                    </connections>
+                </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gOz-zj-w8S">
                     <rect key="frame" x="0.0" y="104" width="414" height="448"/>
                 </imageView>
@@ -59,8 +68,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Zud-V4-3rc" firstAttribute="height" secondItem="gOz-zj-w8S" secondAttribute="height" id="3Uc-KH-6ga"/>
                 <constraint firstItem="88Q-yB-oUe" firstAttribute="top" secondItem="Jap-Eg-Iq2" secondAttribute="bottom" constant="20" id="F1B-We-Odb"/>
                 <constraint firstItem="gOz-zj-w8S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GFC-Xg-nTK"/>
+                <constraint firstItem="Zud-V4-3rc" firstAttribute="leading" secondItem="gOz-zj-w8S" secondAttribute="leading" id="GPO-7O-7Np"/>
                 <constraint firstItem="V9c-uu-Jod" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="HXt-23-Z63"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jap-Eg-Iq2" secondAttribute="trailing" id="I6h-ng-cbe"/>
                 <constraint firstItem="Jap-Eg-Iq2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JPG-CR-V7H"/>
@@ -70,10 +81,12 @@
                 <constraint firstItem="V9c-uu-Jod" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="do3-rp-h3o"/>
                 <constraint firstItem="Jap-Eg-Iq2" firstAttribute="top" secondItem="gOz-zj-w8S" secondAttribute="bottom" constant="10" id="h6Q-wk-zi4"/>
                 <constraint firstItem="gOz-zj-w8S" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="i84-fW-2FP"/>
+                <constraint firstItem="Zud-V4-3rc" firstAttribute="top" secondItem="gOz-zj-w8S" secondAttribute="top" id="ofu-Nv-tsG"/>
+                <constraint firstItem="Zud-V4-3rc" firstAttribute="width" secondItem="gOz-zj-w8S" secondAttribute="width" id="pmm-N9-MEq"/>
                 <constraint firstItem="gOz-zj-w8S" firstAttribute="top" secondItem="V9c-uu-Jod" secondAttribute="bottom" constant="20" id="us6-2F-9Ut"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="133" y="105"/>
+            <point key="canvasLocation" x="131.8840579710145" y="104.46428571428571"/>
         </view>
     </objects>
 </document>

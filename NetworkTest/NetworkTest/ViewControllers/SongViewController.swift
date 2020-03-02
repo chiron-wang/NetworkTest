@@ -11,9 +11,11 @@ import AVFoundation
 
 class SongViewController: UIViewController {
     
-    var taylorSong: Song?
+    var pennySong: Song?
     var player: AVAudioPlayer?
     var soundData: Data?
+    let urlStr = "https://itunes.apple.com/search?term=戴佩妮&media=music"
+    .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
     
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var coverImageView: UIImageView!
@@ -24,9 +26,7 @@ class SongViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlStr = "https://itunes.apple.com/search?term=swift&media=music"
-        
-        getSongJSON(urlStr)
+        getSongJSON(urlStr!)
     }
     
     // MARK: - IBAction
@@ -44,11 +44,15 @@ class SongViewController: UIViewController {
         }
     }
     
-    
     @IBAction func stopButtonPressed(_ sender: UIButton) {
         guard let player = player else { return }
         player.stop()
     }
+    
+    @IBAction func refreshButton(_ sender: UIButton) {
+        getSongJSON(urlStr!)
+    }
+    
     
     // MARK: - Functional Methods
     
@@ -59,21 +63,19 @@ class SongViewController: UIViewController {
                 decoder.dateDecodingStrategy = .iso8601
                 
                 if let data = data, let songResults = try? decoder.decode(SongResults.self, from: data) {
-                    let filterResult = songResults.results.filter { (song) -> Bool in
-                        song.artistName == "Taylor Swift"
-                    }
-                    self.taylorSong = filterResult.randomElement()
-                    self.getImage(self.taylorSong?.artworkUrl100) { (image) in
+                    
+                    self.pennySong = songResults.results.randomElement()
+                    self.getImage(self.pennySong?.artworkUrl100) { (image) in
                         DispatchQueue.main.async {
                             self.coverImageView.image = image
                         }
                     }
                     
                     DispatchQueue.main.async {
-                        self.artistLabel.text = self.taylorSong?.artistName
-                        self.releaseLabel.text = self.taylorSong?.releaseDate.description
+                        self.artistLabel.text = self.pennySong?.artistName
+                        self.releaseLabel.text = self.pennySong?.releaseDate.description
                     }
-                    guard let soundUrl = self.taylorSong?.previewUrl else { return }
+                    guard let soundUrl = self.pennySong?.previewUrl else { return }
                     self.soundData = try? Data(contentsOf: soundUrl)
                 } else {
                     print("error")
